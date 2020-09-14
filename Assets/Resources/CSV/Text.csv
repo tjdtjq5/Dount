@@ -1,0 +1,14 @@
+Id,StringKey,Ko,Us
+1,HelpText_1,도움말 내용 1,HelpDescription 1
+2,HelpText_2,도움말 내용 2,HelpDescription 2
+3,HelpText_3,도움말 내용 3,HelpDescription 3
+4,HelpText_4,도움말 내용 4,HelpDescription 4
+5,HelpText_5,도움말 내용 5,HelpDescription 5
+6,RemoveAdsTitle,광고제거,RemoveAds
+7,RemoveAdsDesc,"전면광고/배너광고가 제거되며, [1번 부활]을 광고없이 사용 가능합니다.","All ads (Front Ad / Banner Ad) are no longer output, and [1st Resurrection] can be used without advertising."
+8,StartAfter5MinutesTitle,5분 후 시작,Start After 5 Minutes
+9,StartAfter5MinutesDesc,"5분 후 시점부터 게임을 시작하며, 2000골드를 가진채 시작합니다.",The game starts 5 minutes later and starts with 2000 gold.
+10,FoodEvent,흉년입니다. 30초 후 [식량]이 큰 폭으로 감소합니다.,It is a famine. Food will decrease after {0} seconds.
+11,WaterEvent,가뭄입니다. 30초 후 [물]이 큰 폭으로 감소합니다.,Drought. Water will decrease after {0} seconds.
+12,GoldEvent,시설이 노후하여 수리가 필요합니다. 30초 후 [골드]가 큰 폭으로 감소합니다.,The facility is old and needs repair. Gold is reduced after {0} seconds.
+13,EnergyEvent,과부화가 발생하였습니다. 30초 후 [에너지]가 큰 폭으로 감소합니다.,Overload has occurred. The energy decreases after {0} seconds.
