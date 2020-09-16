@@ -21,6 +21,7 @@ public class InGame : MonoBehaviour
     public Resource resource;
     public AdComeback adComeback;
     public Restart restart;
+    public GoogleSheetRanking googleSheetRanking;
 
     [Header("게임오버")]
     public GameObject gameOverPannel;
@@ -103,6 +104,8 @@ public class InGame : MonoBehaviour
         }
         else
         {
+            googleSheetRanking.SetScore((int)Time.instance.GetTime());
+
             reStartPannel.SetActive(true);
             restart.RestartOpen();
         }

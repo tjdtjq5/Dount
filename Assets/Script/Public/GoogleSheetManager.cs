@@ -5,6 +5,8 @@ using UnityEngine.Networking;
 
 public class GoogleSheetManager : MonoBehaviour
 {
+    public static GoogleSheetManager instance;
+
     const string publicTableUrl = "https://docs.google.com/spreadsheets/d/1xm_y4Hnk_6qlPe1FaW8RW2v1ec_tjGGPxBX2GY-8ge0";
     const string tsv = "/export?format=tsv";
     const string range = "&range=A2:B"; // A2 부터 B까지 
@@ -12,10 +14,15 @@ public class GoogleSheetManager : MonoBehaviour
 
     const string authUrl = "";
     const string authScriptUrl = "https://script.google.com/macros/s/AKfycby3F_5Isp1UDeDc6nHN5_zCb9mmHPvEHkMeWvbWFwtCKfvhfhc/exec";
-    public string id; public string password;
+    [SerializeField] public string id = "최성섭";[SerializeField] public string password = "비밀번호";
 
 
     public ResponseData RD = new ResponseData();
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
@@ -46,7 +53,7 @@ public class GoogleSheetManager : MonoBehaviour
         print(data);
     }
 
-    IEnumerator Post(WWWForm form)
+    public IEnumerator Post(WWWForm form, System.Action callback = null)
     {
         string tempUrl = authScriptUrl;
 
@@ -57,6 +64,8 @@ public class GoogleSheetManager : MonoBehaviour
             if (www.isDone) Response(www.downloadHandler.text);
             else print("웹의 응답이 없습니다.");
         }
+
+        if (callback != null) callback();
     }
 
     public void Response(string json)
@@ -113,6 +122,15 @@ public class GoogleSheetManager : MonoBehaviour
         form.AddField("password", password);
 
         StartCoroutine(Post(form));
+    }
+
+    public bool IsLogin()
+    {
+        if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(password))
+        {
+            return false;
+        }
+        return true;
     }
 
     public void Logout()

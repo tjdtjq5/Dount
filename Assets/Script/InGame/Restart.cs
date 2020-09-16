@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Restart : MonoBehaviour
 {
+
     public GameObject gameOverPannel;
     public GameObject adComebackPannel;
     public GameObject reStartPannel;

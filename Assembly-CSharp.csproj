@@ -73,10 +73,12 @@
     <Compile Include="Assets\Script\InGame\Restart.cs" />
     <Compile Include="Assets\Script\InGame\Time.cs" />
     <Compile Include="Assets\Script\Lobby\Help.cs" />
+    <Compile Include="Assets\Script\Lobby\Ranking.cs" />
     <Compile Include="Assets\Script\Lobby\Setting.cs" />
     <Compile Include="Assets\Script\Lobby\Shop.cs" />
     <Compile Include="Assets\Script\Public\EnumManager.cs" />
     <Compile Include="Assets\Script\Public\GoogleSheetManager.cs" />
+    <Compile Include="Assets\Script\Public\GoogleSheetRanking.cs" />
     <Compile Include="Assets\Script\Public\Parser\BuildParser.cs" />
     <Compile Include="Assets\Script\Public\Parser\CSVParser.cs" />
     <Compile Include="Assets\Script\Public\Parser\ConfigParser.cs" />
