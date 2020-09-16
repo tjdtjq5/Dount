@@ -22,7 +22,8 @@ public class Ranking : MonoBehaviour
             Destroy(context.GetChild(i).gameObject);
         }
 
-        GetLankingList(50, () => {
+        int rankNumber = ConfigParser.instance.config.RankingNumber;
+        GetLankingList(rankNumber, () => {
             for (int i = 0; i < tempUserInfoList.Count; i++)
             {
                 GameObject prepab = Instantiate(userInfoPrepab, Vector3.zero, Quaternion.identity, context);

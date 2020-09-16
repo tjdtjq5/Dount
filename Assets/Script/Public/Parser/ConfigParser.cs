@@ -31,6 +31,7 @@ public class ConfigParser : MonoBehaviour
         config.RevivalEnergy = int.Parse(data[12]);
         config.BmStartTime_Sec = int.Parse(data[13]);
         config.BmStartGold = int.Parse(data[14]);
+        config.RankingNumber = int.Parse(data[15]);
     }
 }
 [System.Serializable]
@@ -51,4 +52,5 @@ public struct ConfigParserStruct
     public int RevivalEnergy;
     public int BmStartTime_Sec;
     public int BmStartGold;
+    public int RankingNumber;
 }

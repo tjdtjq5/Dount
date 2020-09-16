@@ -96,6 +96,8 @@ public class InGame : MonoBehaviour
         }
 
         gameOverPannel.SetActive(true);
+        googleSheetRanking.SetScore((int)Time.instance.GetTime());
+
         Time.instance.TimePause();
         if (!isGameover)
         {
@@ -104,7 +106,6 @@ public class InGame : MonoBehaviour
         }
         else
         {
-            googleSheetRanking.SetScore((int)Time.instance.GetTime());
 
             reStartPannel.SetActive(true);
             restart.RestartOpen();
